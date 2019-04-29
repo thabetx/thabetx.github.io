@@ -1,1 +1,7 @@
-theme: jekyll-theme-tactile
+title: My Blog
+description: This is my personal blog.
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
