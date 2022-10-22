@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<title>Live Programming</title>
+
+<p> <b>Live Programming</b> <hr>
+
+<p> Whenver I'm prototyping something new, I tend to create these three files, <b>program.c</b>, <b>build.bat</b>, and <b>watch.bat</b>
+
+<p> <b> program.c </b> contains the actual program that I'm prototyping.
+
+<p> <b> build.bat </b> contains the command that builds and runs <b>program.c</b>. For a simple C program it can be something like
+
+<pre>clang test.c && a.exe </pre>
+
+<p> <b>watch.bat </b> is the heart of this setup. It uses <a href=https://github.com/watchexec/watchexec>watchexec</a> to compile and run the program whenever it changes. It usually looks like
+
+<pre>watchexec -c -r -w program.c build.bat </pre>
+
+With this setup, whenever program.c changes, watchexec clears the console; shuts down the running program; recompiles it; then runs it again.
+
+<p> Here is how the setup looks like in action
+
+<p> <video width="100%" controls> <source src="images/live.mp4">
+
+<p> Another setup with an actual GUI program can be found <a href=https://github.com/thabetx/raylib-zig-playground>here</a>. It doesn't use watchexec and is built using zig and raylib.
+
+<p> The immediate feedback makes this  a more enjoyable programming experience.
+
+<hr>
+<p>
+<a href=index.html>Home</a> <a href=about.html>About</a>
