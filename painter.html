@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<title>Discy: Nice Little Time and Habit Tracker</title>
+<title>Painter: A GPU-Driven painting program</title>
 
 <script src="https://getinsights.io/js/insights.js"></script>
 <script>
@@ -71,70 +71,76 @@ img {
 
 <div class="flex-row">
   <div class="flex-col">
-    <p class="title"> Discy
+    <p class="title"> Painter
 
-    <p class="subtitle"> Nice Little Time and Habit Tracker</p>
+    <p class="subtitle"> A GPU-Driven Painting Program</p>
 
-    <a class="download-button" href=>Download (Coming Soon)</a>
     <ul>
-    <li>Habit Tracking
-    <li>Day Navigation
-    <li>Clipboard Support
-    <li>Prayer Times Integration
-    <li>Smooth Animations
-    <li>Sound Effects
-    <li>And Many Other Small Things
-    <li>Tutorial Coming Soon
+    <li>Multi-Layer
+    <li>Disk-Persistent undo-redo
+    <li>Filters
+    <li>Free Lasso/Line/Gradient
+    <li>2D Transformation
+    <li>Line and Gradient tools
+    <li>Time lapse generation
+    <li>Built-in gallery
     </ul>
 
     <hr>
   </div>
 
-  <p> <video width="80%" controls autoplay loop> <source src="images/discy/discy.mp4">
+  <p> <img class="img" src="images/painter/painter.png">
 </div>
 
 <hr>
 
 <div class="flex-row">
   <div>
-    <p class="title2">Track Habits</p>
+    <p class="title2">Transformation</p>
     <p class="subtitle">
-    Add a habit like this{habit}.<br>
-    Add a * to mark it as done.<br>
-    Habits automatically carry over to the next day.
+    Here a new layer is crated, then transformed.<br>
+    The transformation can be freely manipulated or sheared.
     </p>
   </div>
-  <p> <video width="80%" controls autoplay loop> <source src="images/discy/habits.mp4">
-  <div>
-    <p class="title2">Navigate Between Days</p>
-    <p class="subtitle">
-    Easily move between days to compare them.<br>
-    Each day consists of 144 segments (24*6).
-    </p>
-  </div>
-  <p> <video width="80%" controls autoplay loop> <source src="images/discy/days.mp4">
+  <p> <video width="100%" controls autoplay loop> <source src="images/painter/transform.mp4">
 </div>
 
 <hr>
 
-<div class="flex-col">
+<div class="flex-row">
   <div>
-    <p class="title2">Prayer Times Integration</p>
+    <p class="title2">Applying Filters</p>
     <p class="subtitle">
+    Various filters are available like brightness and blur.<br>
+    Both work directly on the GPU using computer shaders.
     </p>
   </div>
-  <p class="flex-row"> <video width="50%" controls autoplay loop> <source src="images/discy/prayers.mp4">
+  <p> <video width="100%" controls autoplay loop> <source src="images/painter/filter.mp4">
 </div>
+
+<hr>
+
+<div class="flex-row">
+  <div>
+    <p class="title2">Free Lasso</p>
+    <p class="subtitle">
+    Here the free lasso is used to select part of the image.<br>
+    Then the line, gradient, and transform tools are used.
+    </p>
+  </div>
+  <p> <video width="100%" controls autoplay loop> <source src="images/painter/lasso.mp4">
+</div>
+
 <hr>
 
 <P> Made using
-<a href=https://odin-lang.org>Odin</a>
-<a href=https://www.raylib.com>raylib</a>
-<a href=https://www.kenney.nl/>kenney assets for sfx</a>
+<a href=https://ziglang.org>Zig</a>
+<a href=https://github.com/floooh/sokol>sokol</a>
+<a href=https://github.com/lz4/lz4>lz4</a>
+<a href=https://github.com/nothings/stb>stb</a>
 
 space-around
 <hr>
 
 <a href=index.html>Home</a> <a href=https://twitter.com/thabetx>Twitter</a> <a href=https://github.com/thabetx>GitHub</a>
-
 
