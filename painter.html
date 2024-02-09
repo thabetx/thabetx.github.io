@@ -49,6 +49,13 @@ insights.trackPages();
   justify-content: center;
   gap: 5em;
 }
+.flex-row-scaled {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5em;
+  width: 30%
+}
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -129,6 +136,23 @@ img {
     </p>
   </div>
   <p> <video width="100%" controls autoplay loop> <source src="images/painter/lasso.mp4">
+</div>
+
+<hr>
+
+<div class="flex-col">
+  <div>
+    <p class="title2">Timelapse Generation</p>
+    <p class="subtitle">
+    A timelapse can be generated for the painting
+    </p>
+  </div>
+  <div class="flex-row">
+    <p> <video width="100%" controls autoplay loop> <source src="images/painter/tomato.mp4">
+    <div class="flex-row-scaled">
+      <p> <video width="100%" controls autoplay loop> <source src="images/painter/light.mp4">
+    </div>
+  </div>
 </div>
 
 <hr>
