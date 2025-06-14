@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Landing page of an outliner" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Boarda</title>
+		<link rel="icon" href="images/boarda2/icon.png" type="image/x-icon" />
+	</head>
+
+	<style>
+		:root {
+			--main-color: rgb(231, 223, 193);
+		}
+		.entire-page {
+			font-family: system-ui;
+			background-color: var(--main-color);
+			background-attachment: fixed;
+			height: 100%;
+
+			margin: 0;
+		}
+		.main-layout {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			margin: 1em 0em;
+		}
+		.navbar {
+			display: flex;
+			align-items: center;
+			padding: 1em;
+
+			box-sizing: border-box;
+			margin: 0em;
+			width: 100%;
+			gap: 0.5em;
+		}
+		.navbar-image {
+			width: 3.5em;
+		}
+		.navbar-text {
+			font-size: 2.5em;
+			font-weight: bold;
+			color: black;
+			margin: 0;
+		}
+		.title {
+			font-size: 4em;
+			font-weight: bold;
+			color: black;
+			margin: 0;
+			text-align: center;
+		}
+		.subtitle {
+			font-size: 2em;
+			line-height: 1;
+			color: black;
+			margin: 0;
+			text-align: center;
+			max-width: 800px;
+		}
+		.subsubtitle {
+			font-size: 1.1em;
+			color: black;
+			margin: 0.2em;
+			text-align: center;
+		}
+		.link-style {
+			text-decoration: none !important;
+		}
+		.download-button {
+			display: flex;
+			text-align: center;
+			align-items: center;
+
+			font-size: 1.5em;
+			color: black;
+
+			margin-top: 1em;
+			background-color: var(--main-color);
+			padding: 0.5em 2em;
+			gap: .5em;
+
+			border-radius: 0.3em;
+			border-width: 0.3em;
+			border-color: black;
+			border-style: solid;
+
+			cursor: pointer;
+			box-shadow: 0px 0px 30px rgb(141, 123, 50);
+			transition: all 200ms;
+
+			&:hover {
+				background-color: rgb(235, 192, 119);
+				box-shadow: 0px 0px 100px rgb(201, 163, 43);
+			}
+		}
+		.os-logo {
+			fill: black;
+		}
+		.splash-image {
+			width: 75%;
+			margin: 1em;
+			box-shadow: 0px 0px 20px rgb(130, 130, 130);
+		}
+		.video-container {
+			border-radius: 10px 10px 10px 10px;
+			overflow: hidden;
+			margin: 1vw;
+		}
+		.video-style {
+			width: 100%;
+		}
+
+		.feature-grid {
+			display: flex;
+			margin: 1em;
+			align-items: center;
+			gap: 2em;
+			max-width: 1400px;
+		}
+
+		.feature-video-container {
+			display: flex;
+			margin: 1vw;
+			border-radius: 1.0em;
+			padding: 1.0em;
+			border-width: 0.2em;
+			border-color: black;
+			border-style: solid;
+			background-color: rgb(220, 200, 180);
+			align-self: stretch;
+		}
+		.feature-text {
+			font-size: 2em;
+			color: black;
+			margin: 0.3em;
+			font-weight: bold;
+		}
+		.feature-subtext {
+			font-size: 1.2em;
+			color: black;
+			margin: 0.3em;
+		}
+
+		@media(max-width:1200px) {
+			.feature-grid {
+				 flex-direction: column;
+			}
+		}
+
+		kbd {
+			background-color: #eee;
+			color: #333;
+			border-radius: 3px;
+			border: 1px solid #b4b4b4;
+			box-shadow:
+				0 1px 1px rgba(0, 0, 0, 0.2),
+				0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+			font-size: 0.95em;
+			font-weight: 700;
+			padding: 2px 4px;
+		}
+
+		normal {
+			background-color: #ebc077;
+			color: black;
+			border-radius: 3px;
+			border: 1px solid #b4b4b4;
+			font-size: 1em;
+			padding: 2px 4px;
+		}
+		important {
+			background-color: #eb4d6e;
+			color: black;
+			border-radius: 3px;
+			border: 1px solid #b4b4b4;
+			font-size: 1em;
+			padding: 2px 4px;
+		}
+		done {
+			background-color: #1aa858;
+			color: black;
+			border-radius: 3px;
+			border: 1px solid #b4b4b4;
+			font-size: 1em;
+			padding: 2px 4px;
+		}
+		cancelled {
+			background-color: #aaaaaa;
+			color: black;
+			border-radius: 3px;
+			border: 1px solid #b4b4b4;
+			font-size: 1em;
+			padding: 2px 4px;
+			text-decoration: line-through;
+		}
+	</style>
+
+	<body class="entire-page">
+		<nav class="navbar">
+			<img src="images/boarda2/icon.png" alt="Boarda Logo" class="navbar-image">
+			<p class="navbar-text">Boarda</p>
+		</nav>
+
+		<div class="main-layout" >
+			<p class="title">Text Notes with A Flexible Layout</p>
+
+			<a href="https://github.com/thabetx/boarda2-release/releases/download/v1.0-alpha/boarda.exe" class="link-style">
+				<button class="download-button">
+					<svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 22 22" viewBox class="os-logo">
+						<rect width="10" height="10" x="00" y="00" />
+						<rect width="10" height="10" x="12" y="00" />
+						<rect width="10" height="10" x="00" y="12" />
+						<rect width="10" height="10" x="12" y="12" />
+					</svg>
+					Download for Windows
+				</button>
+			</a>
+			<p class="subsubtitle">v1.0-alpha (<2MB)</p>
+
+			<img class="splash-image" src="images/boarda2/screenshot.webp">
+
+			<p></p>
+			<p class="title">Features Overview</p>
+			<p></p>
+
+			<div class="feature-grid">
+				<div class="feature-video-container">
+					<p class="feature-text"> Create Cards </p>
+					<p class="feature-subtext"> Create a new card using <kbd>Ctrl+Enter</kbd>. Multiline text is supported. Finish editing with <kbd>Esc</kbd> </p>
+					<div class="video-container"> <video class="video-style" controls autoplay loop> <source src="images/boarda2/feature-create.mp4"></video> </div>
+				</div>
+				<div class="feature-video-container">
+					<p class="feature-text"> Delete and Undo </p>
+					<p class="feature-subtext"> Delete cards with <kbd>Delete</kbd> undo with <kbd>Ctrl+z</kbd> </p>
+					<div class="video-container"> <video class="video-style" controls loop> <source src="images/boarda2/feature-delete-undo.mp4"></video> </div>
+				</div>
+			</div>
+
+			<div class="feature-grid">
+				<div class="feature-video-container">
+					<p class="feature-text"> Indent </p>
+					<p class="feature-subtext"> Indent cards to create hierarchies using <kbd>Tab</kbd> and <kbd>Ctrl+Tab</kbd> </p>
+					<div class="video-container"> <video class="video-style" controls loop> <source src="images/boarda2/feature-indent.mp4"></video> </div>
+				</div>
+				<div class="feature-video-container">
+					<p class="feature-text"> Zoom In and Out </p>
+					<p class="feature-subtext"> Zoom into a card using <kbd>Alt+↓</kbd> and zoom out to see the bigger picture using <kbd>Alt+↑</kbd> </p>
+					<div class="video-container"> <video class="video-style" controls loop> <source src="images/boarda2/feature-zoom.mp4"></video> </div>
+				</div>
+			</div>
+
+			<div class="feature-grid">
+				<div class="feature-video-container">
+					<p class="feature-text"> Flip Layout </p>
+					<p class="feature-subtext"> Toggle between horizontal and vertical layout for any card using <kbd>v</kbd> </p>
+					<div class="video-container"> <video class="video-style" controls loop> <source src="images/boarda2/feature-layout.mp4"></video> </div>
+				</div>
+				<div class="feature-video-container">
+					<p class="feature-text"> Move Cards </p>
+					<p class="feature-subtext"> Move a card around using <kbd>m</kbd> or <kbd>Shift+←↑↓→</kbd>  </p>
+					<div class="video-container"> <video class="video-style" controls loop> <source src="images/boarda2/feature-move-shift.mp4"></video> </div>
+				</div>
+			</div>
+
+			<div class="feature-grid">
+				<div class="feature-video-container">
+					<p class="feature-text"> Collapse</p>
+					<p class="feature-subtext"> Hide or show children of a card using <kbd>c</kbd>. This is useful to reduce noise </p>
+					<div class="video-container"> <video class="video-style" controls loop> <source src="images/boarda2/feature-collapse.mp4"></video> </div>
+				</div>
+				<div class="feature-video-container">
+					<p class="feature-text"> Change Status </p>
+					<p class="feature-subtext"> Cycle between <normal>Normal</normal> <important>Important</important> <done>Done</done> <cancelled>Cancelled</cancelled> using <kbd>t</kbd> and sort based on status using <kbd>s</kbd> </p>
+					<div class="video-container"> <video class="video-style" controls loop> <source src="images/boarda2/feature-status.mp4"></video> </div>
+				</div>
+			</div>
+
+			<div class="feature-grid">
+				<div class="feature-video-container">
+					<p class="feature-text"> Bookmarks </p>
+					<p class="feature-subtext"> Bookmark a card using <kbd>Ctrl+b</kbd>. Navigate between bookmarks using <kbd>Ctrl+Tab</kbd> </p>
+					<div class="video-container"> <video class="video-style" controls loop> <source src="images/boarda2/feature-bookmarks.mp4"></video> </div>
+				</div>
+				<div class="feature-video-container">
+					<p class="feature-text"> Search </p>
+					<p class="feature-subtext"> Search with <kbd>Ctrl+f</kbd> and navigate with <kbd>F3</kbd> </p>
+					<div class="video-container"> <video class="video-style" controls loop> <source src="images/boarda2/feature-search.mp4"></video> </div>
+				</div>
+			</div>
+
+			<div class="feature-grid">
+				<div class="feature-video-container">
+					<p class="feature-text"> Duplicate </p>
+					<p class="feature-subtext"> Duplicate a card with <kbd>Ctrl+d</kbd>. This can be used to create daily templates. Set the card's text to today's date using <kbd>Ctrl+t</kbd> </p>
+					<div class="video-container"> <video class="video-style" controls loop> <source src="images/boarda2/feature-duplicate.mp4"></video> </div>
+				</div>
+				<div class="feature-video-container">
+					<p class="feature-text"> Navigate Siblings </p>
+					<p class="feature-subtext"> Navigate between siblings using <kbd>Ctrl+ ← →</kbd>. This can be used to compare adjacent cards </p>
+					<div class="video-container"> <video class="video-style" controls loop> <source src="images/boarda2/feature-navigate-siblings.mp4"></video> </div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>
